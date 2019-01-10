@@ -1,0 +1,5 @@
+{
+  "project_slug": "project_to_modify",
+  "handler_name": "handler_name",
+  "handler_class_name": "{{ cookiecutter.handler_name.title().replace('_', '').replace('-', '') }}Handler"
+}
