@@ -1,5 +1,8 @@
 {
-  "project_slug": "project_to_modify",
-  "handler_name": "handler_name",
-  "handler_class_name": "{{ cookiecutter.handler_name.title().replace('_', '').replace('-', '') }}Handler"
+  "plugin_name": null,
+  "plugin_description": "",
+  "handler_class_name": "{{ cookiecutter.plugin_name.title().replace('_', '').replace('-', '') }}Handler",
+  "repo_name": "rotest-{{cookiecutter.plugin_name|lower|replace('_', '-')}}",
+  "module_name": "{{cookiecutter.plugin_name|lower|replace('-', '_')}}"
 }
+
