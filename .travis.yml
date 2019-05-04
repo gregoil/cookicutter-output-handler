@@ -1,0 +1,19 @@
+language: python
+sudo: required
+dist: xenial
+stages:
+  - test
+python:
+- '2.7'
+- '3.5'
+- '3.6'
+- '3.7'
+install: pip install cookiecutter tox
+env:
+  - DJANGO_SETTINGS_MODULE=rotest.common.django_utils.settings
+script:
+  - cookiecutter . --no-input plugin_name=sample_output_handler
+  - cd rotest-sample-output-handler
+  - pip install .
+  - rotest --help | grep sample_output_handler
+  - tox -e $(echo py$TRAVIS_PYTHON_VERSION | tr -d .)
