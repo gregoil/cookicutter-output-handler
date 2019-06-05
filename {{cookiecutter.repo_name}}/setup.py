@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='{{ cookiecutter.repo_name }}',
-    version="0.1.0",
+    version="0.2.0",
     description="{{ cookiecutter.plugin_description }}",
     long_description=open("README.rst").read(),
     license="MIT",
