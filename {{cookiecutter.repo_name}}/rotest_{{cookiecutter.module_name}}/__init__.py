@@ -75,9 +75,14 @@ class {{ cookiecutter.handler_class_name }}(AbstractResultHandler):
     def stop_test_run(self):
         """Called once after all tests are executed."""
 
-    def add_success(self, test, msg):
+    def add_success(self, test):
         """Called when a test has completed successfully.
+        Args:
+            test (rotest.core.abstract_test.AbstractTest): test item instance.
+        """
 
+    def add_info(self, test, msg):
+        """Called when a test registers a success message.
         Args:
             test (rotest.core.abstract_test.AbstractTest): test item instance.
             msg (str): success message.
